@@ -109,3 +109,34 @@ int main(){
     return 0;
 }
 // 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 -1
+
+
+
+
+
+vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> level;
+        queue<TreeNode*> q;
+        if(root==nullptr){
+            return {};
+        }
+        q.push(root);
+
+        while(!q.empty()){
+            vector<int> lev;
+            for(int i=q.size(); i>0; --i){
+                TreeNode* temp = q.front();
+                q.pop();
+                lev.push_back(temp->val);
+                if(temp->left){
+                    q.push(temp->left);
+                }
+                if(temp->right){
+                     q.push(temp->right);
+                }
+            }
+            level.push_back(lev);
+        }
+        return level;
+
+    }
