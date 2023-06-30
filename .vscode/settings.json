@@ -52,6 +52,7 @@
         "map": "cpp",
         "set": "cpp",
         "string": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "unordered_map": "cpp"
     }
 }
