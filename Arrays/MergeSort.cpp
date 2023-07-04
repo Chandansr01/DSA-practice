@@ -40,7 +40,7 @@ void merge(int *arr, int l, int r){
     while(x<len1){
         arr[k++]=left[x++];
     }
-     while(x<len1){
+     while(y<len2){
         arr[k++]=left[y++];
     }
     
