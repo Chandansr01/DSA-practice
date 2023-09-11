@@ -22,11 +22,9 @@ class sedan: protected car{
             cout<<this->tyres<<endl;
 
         }
-
-
 };
 int main(){
-    sedan car1("ciaz","petrol",4);
+    sedan car1("city","petrol",4);
     // cout<<car1.fuel<<endl;
-    // car1.print();
+    car1.print();
 }

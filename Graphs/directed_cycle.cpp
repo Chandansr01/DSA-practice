@@ -1,6 +1,6 @@
 #include<unordered_map>
 #include<list>
-
+// this causes tle. so we can use kahn algo. find topo sort. put counter on bfs pop and if counter == numebr of nodes valid else cyle
 bool checkCycleDFS(int node, unordered_map<int,bool> &visited,
    unordered_map<int,bool> &dfsvisited,unordered_map<int, list<int>> &adj ){
      visited[node]=true;

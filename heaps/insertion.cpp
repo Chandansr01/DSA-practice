@@ -24,8 +24,8 @@ class heap{
                     return;
                 }
             }
-
         }
+        
         void print(){
             for(int i=1; i<=size; i++){
                 cout<<arr[i]<<" ";
@@ -89,6 +89,10 @@ void heapSort(int arr[], int n){
         swap(arr[size], arr[1]);
         size--;
         heapify(arr, size, 1);
+        // for(int i=0; i<n+1; i++){
+        //     cout<<arr[i]<<",";
+        // }
+        // cout<<endl;
     }
 }
 
@@ -103,10 +107,13 @@ int main(){
 
     int heap[6] ={-1,54,53,55,52,50};
     int n =5;
-    for(int i=n/2; i>0; i--){
+    
+for(int i=n/2; i>0; i--){
         heapify(heap,n,i);
     } 
-
+     for(int i=1; i<=n; i++){
+        cout<<heap[i]<<" ";
+    }cout<<endl;
     heapSort(heap, n);
 
     for(int i=1; i<=n; i++){
